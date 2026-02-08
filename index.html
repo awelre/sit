@@ -4,66 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lxngt!me | Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
+        * { box-sizing: border-box; }
         body {
-            background-color: #050505;
-            color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
+            min-height: 100vh;
+            padding: 20px;
         }
-        .container {
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 400px;
             text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
-        h1 {
-            font-size: 5rem;
-            letter-spacing: 15px;
-            text-transform: uppercase;
-            margin: 0;
-            background: linear-gradient(45deg, #fff, #444);
+        .logo {
+            font-weight: 900;
+            font-size: 2.5rem;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #fff 40%, #555 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: glow 2s infinite alternate;
         }
-        p {
-            color: #888;
-            letter-spacing: 5px;
-            margin-top: 10px;
+        .tagline {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .links {
-            margin-top: 30px;
+            display: grid;
+            gap: 15px;
         }
-        .links a {
+        .btn {
+            display: block;
+            background: rgba(255, 255, 255, 0.05);
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9rem;
-            border: 1px solid #333;
-            padding: 10px 20px;
-            transition: 0.3s;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .links a:hover {
+        .btn:hover {
+            background: #fff;
+            color: #000;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .btn-main {
             background: #fff;
             color: #000;
         }
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 2px #fff); }
-            to { filter: drop-shadow(0 0 10px #666); }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.7rem;
+            color: #444;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>lxngt!me</h1>
-        <p>SOUND DESIGN & PRODUCTION</p>
+    <div class="card">
+        <div class="logo">lxngt!me</div>
+        <div class="tagline">Middle Label Producer</div>
+        
         <div class="links">
-            <a href="#">SOUNDCLOUD</a>
-            <a href="#">INSTAGRAM</a>
-            <a href="mailto:contact@middle.v6.rocks">CONTACT</a>
+            <a href="https://link.lxngtime.v6.rocks/" class="btn btn-main" target="_blank">🌐 OFFICIAL SITE</a>
+            
+            <a href="https://soundcloud.com" class="btn" target="_blank">🔊 SOUNDCLOUD</a>
+            <a href="https://instagram.com" class="btn" target="_blank">📸 INSTAGRAM</a>
+            <a href="mailto:contact@middle.v6.rocks" class="btn">📧 BUSINESS INQUIRIES</a>
+        </div>
+
+        <div class="footer">
+            © 2026 MIDDLE LABEL. ALL RIGHTS RESERVED.
         </div>
     </div>
 </body>
